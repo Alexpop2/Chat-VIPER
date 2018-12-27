@@ -8,12 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		60614C1021CE6AB100549531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C0F21CE6AB100549531 /* AppDelegate.swift */; };
-		60614C1221CE6AB100549531 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C1121CE6AB100549531 /* ViewController.swift */; };
-		60614C1521CE6AB100549531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60614C1321CE6AB100549531 /* Main.storyboard */; };
 		60614C1721CE6AB200549531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60614C1621CE6AB200549531 /* Assets.xcassets */; };
 		60614C1A21CE6AB200549531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60614C1821CE6AB200549531 /* LaunchScreen.storyboard */; };
 		60614C2521CE6AB200549531 /* MessengerViperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C2421CE6AB200549531 /* MessengerViperTests.swift */; };
 		60614C3021CE6AB200549531 /* MessengerViperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C2F21CE6AB200549531 /* MessengerViperUITests.swift */; };
+		60614C4221CE6CA900549531 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C4121CE6CA900549531 /* Application.swift */; };
+		60614C4621CE6E6D00549531 /* ModulesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C4521CE6E6D00549531 /* ModulesCoordinator.swift */; };
+		60614C4E21CE707900549531 /* DialogsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C4D21CE707900549531 /* DialogsAssembly.swift */; };
+		60614C5021CE709800549531 /* DialogsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C4F21CE709800549531 /* DialogsRouter.swift */; };
+		60614C5221CE70A800549531 /* DialogsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C5121CE70A800549531 /* DialogsPresenter.swift */; };
+		60614C5421CE70B000549531 /* DialogsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C5321CE70B000549531 /* DialogsInteractor.swift */; };
+		60614C5721CE70E800549531 /* DialogsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60614C5621CE70E800549531 /* DialogsStoryboard.storyboard */; };
+		60614C5921CE711700549531 /* DialogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C5821CE711700549531 /* DialogsViewController.swift */; };
+		60614C5B21CE735C00549531 /* DialogsInteractorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C5A21CE735C00549531 /* DialogsInteractorProtocols.swift */; };
+		60614C5D21CE744C00549531 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C5C21CE744C00549531 /* Dialog.swift */; };
+		60614C5F21CE748600549531 /* DialogsPresenterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C5E21CE748600549531 /* DialogsPresenterProtocols.swift */; };
+		60614C6221CE753D00549531 /* DialogsViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C6121CE753D00549531 /* DialogsViewProtocols.swift */; };
+		60614C6421CE912300549531 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C6321CE912300549531 /* WeatherResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +47,6 @@
 /* Begin PBXFileReference section */
 		60614C0C21CE6AB100549531 /* MessengerViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60614C0F21CE6AB100549531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		60614C1121CE6AB100549531 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		60614C1421CE6AB100549531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60614C1621CE6AB200549531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60614C1921CE6AB200549531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60614C1B21CE6AB200549531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +56,19 @@
 		60614C2B21CE6AB200549531 /* MessengerViperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessengerViperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60614C2F21CE6AB200549531 /* MessengerViperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerViperUITests.swift; sourceTree = "<group>"; };
 		60614C3121CE6AB200549531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60614C4121CE6CA900549531 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		60614C4521CE6E6D00549531 /* ModulesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesCoordinator.swift; sourceTree = "<group>"; };
+		60614C4D21CE707900549531 /* DialogsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogsAssembly.swift; sourceTree = "<group>"; };
+		60614C4F21CE709800549531 /* DialogsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogsRouter.swift; sourceTree = "<group>"; };
+		60614C5121CE70A800549531 /* DialogsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogsPresenter.swift; sourceTree = "<group>"; };
+		60614C5321CE70B000549531 /* DialogsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogsInteractor.swift; sourceTree = "<group>"; };
+		60614C5621CE70E800549531 /* DialogsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DialogsStoryboard.storyboard; sourceTree = "<group>"; };
+		60614C5821CE711700549531 /* DialogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogsViewController.swift; sourceTree = "<group>"; };
+		60614C5A21CE735C00549531 /* DialogsInteractorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogsInteractorProtocols.swift; sourceTree = "<group>"; };
+		60614C5C21CE744C00549531 /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
+		60614C5E21CE748600549531 /* DialogsPresenterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogsPresenterProtocols.swift; sourceTree = "<group>"; };
+		60614C6121CE753D00549531 /* DialogsViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogsViewProtocols.swift; sourceTree = "<group>"; };
+		60614C6321CE912300549531 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +119,10 @@
 		60614C0E21CE6AB100549531 /* MessengerViper */ = {
 			isa = PBXGroup;
 			children = (
-				60614C0F21CE6AB100549531 /* AppDelegate.swift */,
-				60614C1121CE6AB100549531 /* ViewController.swift */,
-				60614C1321CE6AB100549531 /* Main.storyboard */,
-				60614C1621CE6AB200549531 /* Assets.xcassets */,
-				60614C1821CE6AB200549531 /* LaunchScreen.storyboard */,
+				60614C3D21CE6C5400549531 /* App */,
+				60614C4021CE6C7F00549531 /* Services */,
+				60614C3F21CE6C6D00549531 /* Modules */,
+				60614C3E21CE6C5800549531 /* Resources */,
 				60614C1B21CE6AB200549531 /* Info.plist */,
 			);
 			path = MessengerViper;
@@ -123,6 +144,130 @@
 				60614C3121CE6AB200549531 /* Info.plist */,
 			);
 			path = MessengerViperUITests;
+			sourceTree = "<group>";
+		};
+		60614C3D21CE6C5400549531 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				60614C0F21CE6AB100549531 /* AppDelegate.swift */,
+				60614C4121CE6CA900549531 /* Application.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		60614C3E21CE6C5800549531 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				60614C1621CE6AB200549531 /* Assets.xcassets */,
+				60614C1821CE6AB200549531 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		60614C3F21CE6C6D00549531 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				60614C4421CE6E5F00549531 /* Modules Coordinator */,
+				60614C4321CE6E3700549531 /* Dialogs */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		60614C4021CE6C7F00549531 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		60614C4321CE6E3700549531 /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				60614C4C21CE6FBF00549531 /* Assembly */,
+				60614C4B21CE6FB600549531 /* Router */,
+				60614C4A21CE6FA600549531 /* Entity */,
+				60614C4921CE6F9E00549531 /* Presenter */,
+				60614C4821CE6F9500549531 /* Interactor */,
+				60614C4721CE6F9100549531 /* View */,
+			);
+			path = Dialogs;
+			sourceTree = "<group>";
+		};
+		60614C4421CE6E5F00549531 /* Modules Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				60614C4521CE6E6D00549531 /* ModulesCoordinator.swift */,
+			);
+			path = "Modules Coordinator";
+			sourceTree = "<group>";
+		};
+		60614C4721CE6F9100549531 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60614C6021CE752D00549531 /* Protocols */,
+				60614C5521CE70D200549531 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60614C4821CE6F9500549531 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				60614C5321CE70B000549531 /* DialogsInteractor.swift */,
+				60614C5A21CE735C00549531 /* DialogsInteractorProtocols.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		60614C4921CE6F9E00549531 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				60614C5121CE70A800549531 /* DialogsPresenter.swift */,
+				60614C5E21CE748600549531 /* DialogsPresenterProtocols.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		60614C4A21CE6FA600549531 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				60614C5C21CE744C00549531 /* Dialog.swift */,
+				60614C6321CE912300549531 /* WeatherResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		60614C4B21CE6FB600549531 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				60614C4F21CE709800549531 /* DialogsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		60614C4C21CE6FBF00549531 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				60614C4D21CE707900549531 /* DialogsAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		60614C5521CE70D200549531 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				60614C5621CE70E800549531 /* DialogsStoryboard.storyboard */,
+				60614C5821CE711700549531 /* DialogsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		60614C6021CE752D00549531 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				60614C6121CE753D00549531 /* DialogsViewProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +375,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				60614C1A21CE6AB200549531 /* LaunchScreen.storyboard in Resources */,
+				60614C5721CE70E800549531 /* DialogsStoryboard.storyboard in Resources */,
 				60614C1721CE6AB200549531 /* Assets.xcassets in Resources */,
-				60614C1521CE6AB100549531 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +401,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60614C1221CE6AB100549531 /* ViewController.swift in Sources */,
+				60614C5921CE711700549531 /* DialogsViewController.swift in Sources */,
+				60614C5D21CE744C00549531 /* Dialog.swift in Sources */,
+				60614C4221CE6CA900549531 /* Application.swift in Sources */,
+				60614C5F21CE748600549531 /* DialogsPresenterProtocols.swift in Sources */,
+				60614C6221CE753D00549531 /* DialogsViewProtocols.swift in Sources */,
+				60614C6421CE912300549531 /* WeatherResponse.swift in Sources */,
+				60614C5021CE709800549531 /* DialogsRouter.swift in Sources */,
 				60614C1021CE6AB100549531 /* AppDelegate.swift in Sources */,
+				60614C5421CE70B000549531 /* DialogsInteractor.swift in Sources */,
+				60614C4621CE6E6D00549531 /* ModulesCoordinator.swift in Sources */,
+				60614C5B21CE735C00549531 /* DialogsInteractorProtocols.swift in Sources */,
+				60614C5221CE70A800549531 /* DialogsPresenter.swift in Sources */,
+				60614C4E21CE707900549531 /* DialogsAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +449,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		60614C1321CE6AB100549531 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				60614C1421CE6AB100549531 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		60614C1821CE6AB200549531 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -433,6 +581,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8AA5PA5TS;
 				INFOPLIST_FILE = MessengerViper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8AA5PA5TS;
 				INFOPLIST_FILE = MessengerViper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
