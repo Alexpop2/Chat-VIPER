@@ -25,6 +25,7 @@ extension ModulesCoordinator: DialogsPresenterOutput {
         chatViewController.chat = dialog
         let chatsAssembly = ChatsAssembly()
         guard chatsAssembly.build(viewController: chatViewController) != nil else { return }
+        chatViewController.presenterInput.interactorInput.initChat(chat: dialog)
         dialogsPresenter.setChatPresenterOutput(chatViewController: chatViewController)
         
     }

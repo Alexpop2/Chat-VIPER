@@ -1,4 +1,6 @@
 import Foundation
+import MessageInputBar
+import Fakery
 
 class ChatsPresenter {
     private var presenterOutput: ChatsPresenterOutput!
@@ -7,6 +9,21 @@ class ChatsPresenter {
 }
 
 extension ChatsPresenter: ChatsPresenterInput {
+    
+    func insertMessage(inputBar: MessageInputBar) {
+        let faker = Faker(locale: "ru")
+        
+        for component in inputBar.inputTextView.components {
+            
+            if let str = component as? String {
+                let message = UserMessage(id: faker.number.randomInt(),
+                                          text: str,
+                                          date: Date(),
+                                          user: SelfUser.user)
+                interactor.insertMessage(message)
+            }
+        }
+    }
     
     var output: ChatsPresenterOutput {
         get {
@@ -39,5 +56,8 @@ extension ChatsPresenter: ChatsPresenterInput {
 }
 
 extension ChatsPresenter: ChatsInteractorOutput {
-
+    func updateChat(chat: Dialog) {
+        view.updateChat(chat: chat)
+        output.updateChat(chat: chat)
+    }
 }

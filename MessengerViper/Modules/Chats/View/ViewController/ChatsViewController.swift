@@ -27,6 +27,21 @@ class ChatsViewController: MessagesViewController {
 }
 
 extension ChatsViewController: ChatsViewInput {
+    func updateChat(chat: Dialog) {
+        self.chat = chat
+        // Reload last section to update header/footer labels and insert a new one
+        messagesCollectionView.performBatchUpdates({
+            messagesCollectionView.insertSections([chat.messages.count - 1])
+            if (chat.messages.count) >= 2 {
+                messagesCollectionView.reloadSections([chat.messages.count - 2])
+            }
+        }, completion: { [weak self] _ in
+            if self?.isLastSectionVisible() == true {
+                self?.messagesCollectionView.scrollToBottom(animated: true)
+            }
+        })
+    }
+    
     var presenterInput: ChatsPresenterInput {
         get {
             return presenter
@@ -64,22 +79,7 @@ extension ChatsViewController {
 
 extension ChatsViewController {
     func insertMessage(_ message: UserMessage) {
-        chat?.messages.append(message)
-        // Reload last section to update header/footer labels and insert a new one
-        messagesCollectionView.performBatchUpdates({
-            messagesCollectionView.insertSections([(chat?.messages.count ?? 0) - 1])
-            if (chat?.messages.count ?? 0) >= 2 {
-                messagesCollectionView.reloadSections([(chat?.messages.count ?? 0) - 2])
-            }
-        }, completion: { [weak self] _ in
-            if self?.isLastSectionVisible() == true {
-                self?.messagesCollectionView.scrollToBottom(animated: true)
-            }
-        })
-        guard let chatUnwrapped = chat else {
-            return
-        }
-        presenter.output.updateChat(chat: chatUnwrapped)
+
     }
     
     func isLastSectionVisible() -> Bool {
@@ -126,18 +126,7 @@ extension ChatsViewController: MessagesDisplayDelegate {
 extension ChatsViewController: MessageInputBarDelegate {
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-        let faker = Faker(locale: "ru")
-        
-        for component in inputBar.inputTextView.components {
-            
-            if let str = component as? String {
-                let message = UserMessage(id: faker.number.randomInt(),
-                                          text: str,
-                                          date: Date(),
-                                          user: SelfUser.user)
-                insertMessage(message)
-            }
-        }
+        presenter.insertMessage(inputBar: inputBar)
         inputBar.inputTextView.text = String()
         messagesCollectionView.scrollToBottom(animated: true)
     }
