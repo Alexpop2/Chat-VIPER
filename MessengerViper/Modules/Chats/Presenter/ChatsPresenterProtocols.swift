@@ -7,4 +7,5 @@ protocol ChatsPresenterInput: class {
 }
 
 protocol ChatsPresenterOutput: class {
+    func updateChat(chat: Dialog)
 }

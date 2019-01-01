@@ -11,6 +11,16 @@
 		3A8ED2ACD364958A51622077 /* ChatsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202834920212D0E656F8D07B /* ChatsInteractor.swift */; };
 		4FCC0F86376A7761851BDBF4 /* Pods_MessengerViper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFC9B7BBA3B13190FCA9DF3 /* Pods_MessengerViper.framework */; };
 		5DE84816920983E20458D34B /* ChatsViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB657F54CE124B081056916 /* ChatsViewProtocols.swift */; };
+		604B6B5721D668BE0082AE58 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B6B5621D668BE0082AE58 /* User.swift */; };
+		604B6B5921D668FC0082AE58 /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B6B5821D668FC0082AE58 /* UserMessage.swift */; };
+		604B6B5B21D669290082AE58 /* ChatFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B6B5A21D669290082AE58 /* ChatFactory.swift */; };
+		604B6B5D21D6694E0082AE58 /* DialogFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B6B5C21D6694E0082AE58 /* DialogFactory.swift */; };
+		604B6B6D21D66B8F0082AE58 /* DialogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B6B6821D66B8F0082AE58 /* DialogTableViewCell.swift */; };
+		604B6B6E21D66B8F0082AE58 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B6B6921D66B8F0082AE58 /* MessageViewController.swift */; };
+		604B6B6F21D66B8F0082AE58 /* MessageViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B6B6A21D66B8F0082AE58 /* MessageViewControllerDelegate.swift */; };
+		604B6B7021D66B8F0082AE58 /* DialogTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B6B6B21D66B8F0082AE58 /* DialogTableViewCellModel.swift */; };
+		604B6B7121D66B8F0082AE58 /* DialogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604B6B6C21D66B8F0082AE58 /* DialogTableViewCell.xib */; };
+		604B6B7321DA902D0082AE58 /* ChatsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604B6B7221DA902D0082AE58 /* ChatsStoryboard.storyboard */; };
 		60614C1021CE6AB100549531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C0F21CE6AB100549531 /* AppDelegate.swift */; };
 		60614C1721CE6AB200549531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60614C1621CE6AB200549531 /* Assets.xcassets */; };
 		60614C1A21CE6AB200549531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60614C1821CE6AB200549531 /* LaunchScreen.storyboard */; };
@@ -28,7 +38,6 @@
 		60614C5D21CE744C00549531 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C5C21CE744C00549531 /* Dialog.swift */; };
 		60614C5F21CE748600549531 /* DialogsPresenterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C5E21CE748600549531 /* DialogsPresenterProtocols.swift */; };
 		60614C6221CE753D00549531 /* DialogsViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C6121CE753D00549531 /* DialogsViewProtocols.swift */; };
-		60614C6421CE912300549531 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60614C6321CE912300549531 /* WeatherResponse.swift */; };
 		71D08B9CE944B918E2004CFA /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15716663AC9D0EF38815C96D /* ChatsViewController.swift */; };
 		8836B0D357E9F0E7FEB56582 /* ChatsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AAF91E7961336689BBF12D /* ChatsAssembly.swift */; };
 		8BABC0685225407613C62F0E /* ChatsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A949B0E12B79E3589DB4DAA /* ChatsPresenter.swift */; };
@@ -61,6 +70,16 @@
 		443AE8C408FA1E5466726FCF /* ChatsInteractorProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatsInteractorProtocols.swift; sourceTree = "<group>"; };
 		562C8ED82E75CE2D8B2107B5 /* Pods-MessengerViper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessengerViper.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessengerViper/Pods-MessengerViper.release.xcconfig"; sourceTree = "<group>"; };
 		5A949B0E12B79E3589DB4DAA /* ChatsPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatsPresenter.swift; sourceTree = "<group>"; };
+		604B6B5621D668BE0082AE58 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		604B6B5821D668FC0082AE58 /* UserMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessage.swift; sourceTree = "<group>"; };
+		604B6B5A21D669290082AE58 /* ChatFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFactory.swift; sourceTree = "<group>"; };
+		604B6B5C21D6694E0082AE58 /* DialogFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogFactory.swift; sourceTree = "<group>"; };
+		604B6B6821D66B8F0082AE58 /* DialogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogTableViewCell.swift; sourceTree = "<group>"; };
+		604B6B6921D66B8F0082AE58 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		604B6B6A21D66B8F0082AE58 /* MessageViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewControllerDelegate.swift; sourceTree = "<group>"; };
+		604B6B6B21D66B8F0082AE58 /* DialogTableViewCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogTableViewCellModel.swift; sourceTree = "<group>"; };
+		604B6B6C21D66B8F0082AE58 /* DialogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogTableViewCell.xib; sourceTree = "<group>"; };
+		604B6B7221DA902D0082AE58 /* ChatsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatsStoryboard.storyboard; sourceTree = "<group>"; };
 		60614C0C21CE6AB100549531 /* MessengerViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60614C0F21CE6AB100549531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60614C1621CE6AB200549531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,7 +103,6 @@
 		60614C5C21CE744C00549531 /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		60614C5E21CE748600549531 /* DialogsPresenterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogsPresenterProtocols.swift; sourceTree = "<group>"; };
 		60614C6121CE753D00549531 /* DialogsViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogsViewProtocols.swift; sourceTree = "<group>"; };
-		60614C6321CE912300549531 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		70CE563AB7DBD746365DEB8B /* ChatsRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatsRouter.swift; sourceTree = "<group>"; };
 		C7AAF91E7961336689BBF12D /* ChatsAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatsAssembly.swift; sourceTree = "<group>"; };
 		D0A54FFDC18288DB3FADEA88 /* Pods-MessengerViper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessengerViper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MessengerViper/Pods-MessengerViper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,7 +149,6 @@
 			children = (
 				70CE563AB7DBD746365DEB8B /* ChatsRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -141,6 +158,16 @@
 				0AFC9B7BBA3B13190FCA9DF3 /* Pods_MessengerViper.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		604B6B5521D668AE0082AE58 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				604B6B5621D668BE0082AE58 /* User.swift */,
+				604B6B5821D668FC0082AE58 /* UserMessage.swift */,
+				604B6B5A21D669290082AE58 /* ChatFactory.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		60614C0321CE6AB100549531 = {
@@ -282,7 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				60614C5C21CE744C00549531 /* Dialog.swift */,
-				60614C6321CE912300549531 /* WeatherResponse.swift */,
+				604B6B5C21D6694E0082AE58 /* DialogFactory.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -315,6 +342,9 @@
 		60614C6021CE752D00549531 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				604B6B6821D66B8F0082AE58 /* DialogTableViewCell.swift */,
+				604B6B6C21D66B8F0082AE58 /* DialogTableViewCell.xib */,
+				604B6B6B21D66B8F0082AE58 /* DialogTableViewCellModel.swift */,
 				60614C6121CE753D00549531 /* DialogsViewProtocols.swift */,
 			);
 			path = Protocols;
@@ -326,7 +356,6 @@
 				202834920212D0E656F8D07B /* ChatsInteractor.swift */,
 				443AE8C408FA1E5466726FCF /* ChatsInteractorProtocols.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -334,17 +363,18 @@
 			isa = PBXGroup;
 			children = (
 				15716663AC9D0EF38815C96D /* ChatsViewController.swift */,
+				604B6B7221DA902D0082AE58 /* ChatsStoryboard.storyboard */,
 			);
-			name = ViewController;
 			path = ViewController;
 			sourceTree = "<group>";
 		};
 		74464AB6D64AA1CAB713B68D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				604B6B6921D66B8F0082AE58 /* MessageViewController.swift */,
+				604B6B6A21D66B8F0082AE58 /* MessageViewControllerDelegate.swift */,
 				EFB657F54CE124B081056916 /* ChatsViewProtocols.swift */,
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -354,7 +384,6 @@
 				74464AB6D64AA1CAB713B68D /* Protocols */,
 				67E2233CB47101813C1F6551 /* ViewController */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -364,20 +393,19 @@
 				5A949B0E12B79E3589DB4DAA /* ChatsPresenter.swift */,
 				2BD6FA79317587B7F98C2969 /* ChatsPresenterProtocols.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
 		D7538D9D82D2B254E16C6720 /* Chats */ = {
 			isa = PBXGroup;
 			children = (
+				604B6B5521D668AE0082AE58 /* Entity */,
 				D9DAFF41B3B7BA26710E096D /* Assembly */,
 				63A297D548AED45B5E5E94FD /* Interactor */,
 				B1C969603CDC6C23F9A94C4A /* Presenter */,
 				0A62A6B386924A98E62FA801 /* Router */,
 				7B44E3F3F225A5856D2A6822 /* View */,
 			);
-			name = Chats;
 			path = Chats;
 			sourceTree = "<group>";
 		};
@@ -386,7 +414,6 @@
 			children = (
 				C7AAF91E7961336689BBF12D /* ChatsAssembly.swift */,
 			);
-			name = Assembly;
 			path = Assembly;
 			sourceTree = "<group>";
 		};
@@ -499,9 +526,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604B6B7321DA902D0082AE58 /* ChatsStoryboard.storyboard in Resources */,
 				60614C1A21CE6AB200549531 /* LaunchScreen.storyboard in Resources */,
 				60614C5721CE70E800549531 /* DialogsStoryboard.storyboard in Resources */,
 				60614C1721CE6AB200549531 /* Assets.xcassets in Resources */,
+				604B6B7121D66B8F0082AE58 /* DialogTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,22 +605,29 @@
 				60614C4221CE6CA900549531 /* Application.swift in Sources */,
 				60614C5F21CE748600549531 /* DialogsPresenterProtocols.swift in Sources */,
 				60614C6221CE753D00549531 /* DialogsViewProtocols.swift in Sources */,
-				60614C6421CE912300549531 /* WeatherResponse.swift in Sources */,
 				60614C5021CE709800549531 /* DialogsRouter.swift in Sources */,
 				60614C1021CE6AB100549531 /* AppDelegate.swift in Sources */,
+				604B6B6D21D66B8F0082AE58 /* DialogTableViewCell.swift in Sources */,
 				60614C5421CE70B000549531 /* DialogsInteractor.swift in Sources */,
+				604B6B7021D66B8F0082AE58 /* DialogTableViewCellModel.swift in Sources */,
 				60614C4621CE6E6D00549531 /* ModulesCoordinator.swift in Sources */,
 				60614C5B21CE735C00549531 /* DialogsInteractorProtocols.swift in Sources */,
 				60614C5221CE70A800549531 /* DialogsPresenter.swift in Sources */,
 				60614C4E21CE707900549531 /* DialogsAssembly.swift in Sources */,
+				604B6B5921D668FC0082AE58 /* UserMessage.swift in Sources */,
+				604B6B6E21D66B8F0082AE58 /* MessageViewController.swift in Sources */,
 				8836B0D357E9F0E7FEB56582 /* ChatsAssembly.swift in Sources */,
+				604B6B5D21D6694E0082AE58 /* DialogFactory.swift in Sources */,
 				3A8ED2ACD364958A51622077 /* ChatsInteractor.swift in Sources */,
+				604B6B6F21D66B8F0082AE58 /* MessageViewControllerDelegate.swift in Sources */,
 				32AB5E165D2E75E90AB538C7 /* ChatsInteractorProtocols.swift in Sources */,
 				8BABC0685225407613C62F0E /* ChatsPresenter.swift in Sources */,
 				DA0A30B1DB9001E8FE215045 /* ChatsPresenterProtocols.swift in Sources */,
 				BA779DDBA8EBAFF50E00EDB4 /* ChatsRouter.swift in Sources */,
+				604B6B5B21D669290082AE58 /* ChatFactory.swift in Sources */,
 				5DE84816920983E20458D34B /* ChatsViewProtocols.swift in Sources */,
 				71D08B9CE944B918E2004CFA /* ChatsViewController.swift in Sources */,
+				604B6B5721D668BE0082AE58 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

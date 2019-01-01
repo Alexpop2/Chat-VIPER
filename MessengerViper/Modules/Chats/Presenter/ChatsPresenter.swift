@@ -7,6 +7,7 @@ class ChatsPresenter {
 }
 
 extension ChatsPresenter: ChatsPresenterInput {
+    
     var output: ChatsPresenterOutput {
         get {
             return presenterOutput

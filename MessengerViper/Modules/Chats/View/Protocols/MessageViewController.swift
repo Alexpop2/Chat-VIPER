@@ -1,15 +1,28 @@
+//
+//  MessageViewController.swift
+//  181215_Chat
+//
+//  Created by Рабочий on 21/12/2018.
+//  Copyright © 2018 Рабочий. All rights reserved.
+//
+
 import UIKit
 import MessageKit
 import MessageInputBar
 import InitialsImageView
 import Fakery
 
-class ChatsViewController: MessagesViewController {
+// MARK: - Chat screen controller
+
+class MessageViewController: MessagesViewController {
+    
     var chat: Dialog?
-    private var presenter: ChatsPresenterInput!
+    @IBOutlet weak var label: UILabel!
+    weak var delegate: MessageViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        label.text = chat?.user.name ?? ""
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
@@ -26,20 +39,9 @@ class ChatsViewController: MessagesViewController {
     }
 }
 
-extension ChatsViewController: ChatsViewInput {
-    var presenterInput: ChatsPresenterInput {
-        get {
-            return presenter
-        }
-        set {
-            presenter = newValue
-        }
-    }
-}
-
 // MARK: - Change avatars
 
-extension ChatsViewController {
+extension MessageViewController {
     func configureAvatarView(_ avatarView: AvatarView,
                              for message: MessageType,
                              at indexPath: IndexPath,
@@ -52,7 +54,7 @@ extension ChatsViewController {
 
 // MARK: - Keyboard notification observer
 
-extension ChatsViewController {
+extension MessageViewController {
     @objc func keyboardNotification(notification: NSNotification) {
         DispatchQueue.main.async {
             self.messagesCollectionView.scrollToBottom(animated: true)
@@ -62,7 +64,7 @@ extension ChatsViewController {
 
 // MARK: - Insert message
 
-extension ChatsViewController {
+extension MessageViewController {
     func insertMessage(_ message: UserMessage) {
         chat?.messages.append(message)
         // Reload last section to update header/footer labels and insert a new one
@@ -79,7 +81,7 @@ extension ChatsViewController {
         guard let chatUnwrapped = chat else {
             return
         }
-        presenter.output.updateChat(chat: chatUnwrapped)
+        delegate?.updateChat(chat: chatUnwrapped)
     }
     
     func isLastSectionVisible() -> Bool {
@@ -94,7 +96,7 @@ extension ChatsViewController {
 
 // MARK: - MessagesDataSource
 
-extension ChatsViewController: MessagesDataSource {
+extension MessageViewController: MessagesDataSource {
     func currentSender() -> Sender {
         return Sender(id: "\(SelfUser.user.id)", displayName: SelfUser.user.name)
     }
@@ -114,16 +116,16 @@ extension ChatsViewController: MessagesDataSource {
     
 }
 
-extension ChatsViewController: MessagesLayoutDelegate {
+extension MessageViewController: MessagesLayoutDelegate {
     
 }
 
-extension ChatsViewController: MessagesDisplayDelegate {
+extension MessageViewController: MessagesDisplayDelegate {
     
 }
 
 // MARK: - MessageInputBarDelegate
-extension ChatsViewController: MessageInputBarDelegate {
+extension MessageViewController: MessageInputBarDelegate {
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
         let faker = Faker(locale: "ru")

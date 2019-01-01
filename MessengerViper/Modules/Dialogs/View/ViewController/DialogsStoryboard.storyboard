@@ -49,10 +49,22 @@
                         <viewLayoutGuide key="safeArea" id="QU0-7o-xMv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Чат" largeTitleDisplayMode="always" id="kN4-lR-zl1"/>
+                    <connections>
+                        <outlet property="tableView" destination="82s-Ps-5Ft" id="yDF-JC-3V7"/>
+                        <segue destination="Zfu-mE-NL7" kind="show" identifier="goToChat" id="LDH-cb-5Yr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxd-8m-xKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-84" y="84"/>
+        </scene>
+        <!--ChatsViewController-->
+        <scene sceneID="Kof-pA-4mg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChatsStoryboard" referencedIdentifier="ChatsViewController" id="Zfu-mE-NL7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IdC-BN-sTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="83"/>
         </scene>
     </scenes>
 </document>

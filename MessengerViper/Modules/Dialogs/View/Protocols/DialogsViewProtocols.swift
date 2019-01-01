@@ -10,4 +10,6 @@ import Foundation
 
 protocol DialogsViewInput: class {
     var presenterInput: DialogsPresenterInput { get set }
+    
+    func updateDialogs(dialogs: [Dialog])
 }

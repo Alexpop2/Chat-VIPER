@@ -9,16 +9,23 @@
 import UIKit
 
 class ModulesCoordinator {
+    private var dialogsPresenter: DialogsPresenterInput!
+    
     func rootModuleController() -> UIViewController {
         let dialogsAssembly = DialogsAssembly()
         guard let dialogs = dialogsAssembly.build() else { return UIViewController() }
         dialogs.presenter.output = self
+        dialogsPresenter = dialogs.presenter
         return dialogs.controller
     }
 }
 
 extension ModulesCoordinator: DialogsPresenterOutput {
-    func selected(dialog: Dialog) {
+    func selected(dialog: Dialog, chatViewController: ChatsViewController) {
+        chatViewController.chat = dialog
+        let chatsAssembly = ChatsAssembly()
+        guard chatsAssembly.build(viewController: chatViewController) != nil else { return }
+        dialogsPresenter.setChatPresenterOutput(chatViewController: chatViewController)
         
     }
 }
