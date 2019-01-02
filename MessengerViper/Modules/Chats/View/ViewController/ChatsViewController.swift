@@ -78,10 +78,6 @@ extension ChatsViewController {
 // MARK: - Insert message
 
 extension ChatsViewController {
-    func insertMessage(_ message: UserMessage) {
-
-    }
-    
     func isLastSectionVisible() -> Bool {
         
         guard (chat?.messages.isEmpty ?? false) else { return false }

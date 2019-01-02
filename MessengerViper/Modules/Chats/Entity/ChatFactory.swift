@@ -13,10 +13,7 @@ class ChatFactory {
             let message = UserMessage(id: faker.number.randomInt(),
                                       text: faker.lorem.sentence(),
                                       date: Date(timeInterval: faker.number.randomDouble(),
-                                                 since: Calendar.current.date(bySettingHour: 12,
-                                                                              minute: 0,
-                                                                              second: 0,
-                                                                              of: Date())!),
+                                                 since: Calendar.current.date(byAdding: .day, value: -1, to: Date())!),
                                       user: finalUser)
             outArray.append(message)
         }

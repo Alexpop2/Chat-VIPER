@@ -16,8 +16,6 @@
 		604B6B5B21D669290082AE58 /* ChatFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B6B5A21D669290082AE58 /* ChatFactory.swift */; };
 		604B6B5D21D6694E0082AE58 /* DialogFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B6B5C21D6694E0082AE58 /* DialogFactory.swift */; };
 		604B6B6D21D66B8F0082AE58 /* DialogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B6B6821D66B8F0082AE58 /* DialogTableViewCell.swift */; };
-		604B6B6E21D66B8F0082AE58 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B6B6921D66B8F0082AE58 /* MessageViewController.swift */; };
-		604B6B6F21D66B8F0082AE58 /* MessageViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B6B6A21D66B8F0082AE58 /* MessageViewControllerDelegate.swift */; };
 		604B6B7021D66B8F0082AE58 /* DialogTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B6B6B21D66B8F0082AE58 /* DialogTableViewCellModel.swift */; };
 		604B6B7121D66B8F0082AE58 /* DialogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604B6B6C21D66B8F0082AE58 /* DialogTableViewCell.xib */; };
 		604B6B7321DA902D0082AE58 /* ChatsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604B6B7221DA902D0082AE58 /* ChatsStoryboard.storyboard */; };
@@ -75,8 +73,6 @@
 		604B6B5A21D669290082AE58 /* ChatFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFactory.swift; sourceTree = "<group>"; };
 		604B6B5C21D6694E0082AE58 /* DialogFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogFactory.swift; sourceTree = "<group>"; };
 		604B6B6821D66B8F0082AE58 /* DialogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogTableViewCell.swift; sourceTree = "<group>"; };
-		604B6B6921D66B8F0082AE58 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
-		604B6B6A21D66B8F0082AE58 /* MessageViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewControllerDelegate.swift; sourceTree = "<group>"; };
 		604B6B6B21D66B8F0082AE58 /* DialogTableViewCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogTableViewCellModel.swift; sourceTree = "<group>"; };
 		604B6B6C21D66B8F0082AE58 /* DialogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogTableViewCell.xib; sourceTree = "<group>"; };
 		604B6B7221DA902D0082AE58 /* ChatsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatsStoryboard.storyboard; sourceTree = "<group>"; };
@@ -371,8 +367,6 @@
 		74464AB6D64AA1CAB713B68D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				604B6B6921D66B8F0082AE58 /* MessageViewController.swift */,
-				604B6B6A21D66B8F0082AE58 /* MessageViewControllerDelegate.swift */,
 				EFB657F54CE124B081056916 /* ChatsViewProtocols.swift */,
 			);
 			path = Protocols;
@@ -615,11 +609,9 @@
 				60614C5221CE70A800549531 /* DialogsPresenter.swift in Sources */,
 				60614C4E21CE707900549531 /* DialogsAssembly.swift in Sources */,
 				604B6B5921D668FC0082AE58 /* UserMessage.swift in Sources */,
-				604B6B6E21D66B8F0082AE58 /* MessageViewController.swift in Sources */,
 				8836B0D357E9F0E7FEB56582 /* ChatsAssembly.swift in Sources */,
 				604B6B5D21D6694E0082AE58 /* DialogFactory.swift in Sources */,
 				3A8ED2ACD364958A51622077 /* ChatsInteractor.swift in Sources */,
-				604B6B6F21D66B8F0082AE58 /* MessageViewControllerDelegate.swift in Sources */,
 				32AB5E165D2E75E90AB538C7 /* ChatsInteractorProtocols.swift in Sources */,
 				8BABC0685225407613C62F0E /* ChatsPresenter.swift in Sources */,
 				DA0A30B1DB9001E8FE215045 /* ChatsPresenterProtocols.swift in Sources */,
