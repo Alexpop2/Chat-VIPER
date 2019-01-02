@@ -15,6 +15,7 @@ class DialogsPresenter {
 }
 
 extension DialogsPresenter: DialogsPresenterInput {
+    
     var output: DialogsPresenterOutput {
         get {
             return presenterOutput
@@ -42,10 +43,19 @@ extension DialogsPresenter: DialogsPresenterInput {
         }
     }
     
-    
+    func setChatPresenterOutput(chatViewController: ChatsViewController) {
+        chatViewController.presenterInput.output = self
+    }
 }
 
 extension DialogsPresenter: DialogsInteractorOutput {
     func recieved(dialogs: [Dialog]) {
+        view.updateDialogs(dialogs: dialogs)
+    }
+}
+
+extension DialogsPresenter: ChatsPresenterOutput {
+    func updateChat(chat: Dialog) {
+        interactor.updateChat(chat: chat)
     }
 }

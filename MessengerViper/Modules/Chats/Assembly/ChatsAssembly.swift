@@ -1,12 +1,7 @@
 import UIKit
 
 class ChatsAssembly {
-    func build() -> (controller: UIViewController, presenter: ChatsPresenterInput)? {
-        let storyboard = UIStoryboard(name: "ChatsStoryboard", bundle: nil)
-        let rootVC = storyboard.instantiateViewController(withIdentifier: "kChatsNavigationControllerIdentifier")
-        guard let navigationVC = rootVC as? UINavigationController,
-              let viewController = navigationVC.viewControllers.first as? ChatsViewController else { return nil }
-        
+    func build(viewController: ChatsViewController) -> ChatsPresenterInput? {
         let presenter = ChatsPresenter()
         let interactor = ChatsInteractor()
         
@@ -15,6 +10,6 @@ class ChatsAssembly {
         presenter.viewInput = viewController
         interactor.output = presenter
         
-        return (controller: navigationVC, presenter: presenter)
+        return presenter
     }
 }

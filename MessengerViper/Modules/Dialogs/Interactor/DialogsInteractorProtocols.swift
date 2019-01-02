@@ -11,6 +11,7 @@ import Foundation
 protocol DialogsInteractorInput: class {
     var output: DialogsInteractorOutput { get set }
     func getDialogs()
+    func updateChat(chat: Dialog)
 }
 
 protocol DialogsInteractorOutput: class {

@@ -12,8 +12,9 @@ protocol DialogsPresenterInput: class {
     var output: DialogsPresenterOutput { get set }
     var viewInput: DialogsViewInput { get set }
     var interactorInput: DialogsInteractorInput { get set }
+    func setChatPresenterOutput(chatViewController: ChatsViewController)
 }
 
 protocol DialogsPresenterOutput: class {
-    func selected(dialog: Dialog)
+    func selected(dialog: Dialog, chatViewController: ChatsViewController)
 }

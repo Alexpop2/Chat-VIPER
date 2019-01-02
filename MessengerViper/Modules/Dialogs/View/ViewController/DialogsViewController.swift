@@ -10,14 +10,26 @@ import UIKit
 
 class DialogsViewController: UIViewController {
     private var presenter: DialogsPresenterInput!
+    @IBOutlet weak var tableView: UITableView!
+    
+    private let kDialogTableViewCellNib = UINib(nibName: "DialogTableViewCell", bundle: nil)
+    private let kDialogTableViewCellReuseIdentifier = "kDialogTableViewCellNib"
+    
+    private var dataSource = [Dialog]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        demoNetworking()
+        presenter.interactorInput.getDialogs()
+        setUpUI()
     }
 }
 
 extension DialogsViewController: DialogsViewInput {
+    func updateDialogs(dialogs: [Dialog]) {
+        dataSource = dialogs
+        tableView.reloadData()
+    }
+    
     var presenterInput: DialogsPresenterInput {
         get {
             return presenter
@@ -28,26 +40,57 @@ extension DialogsViewController: DialogsViewInput {
     }
 }
 
+// MARK: - Set Up UI
+
 extension DialogsViewController {
-    private func demoNetworking() {
-        let url = URL(string: "https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b6907d289e10d714a6e88b30761fae22")!
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data else { return }
-            DispatchQueue.main.async {
-                self.parse(data: data)
-            }
-        }
-        task.resume()
+    private func setUpUI() {
+        tableView.register(kDialogTableViewCellNib,
+                           forCellReuseIdentifier: kDialogTableViewCellReuseIdentifier)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 64
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+}
+
+// MARK: - UITableViewDataSource Implementation
+
+extension DialogsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSource.count
     }
     
-    private func parse(data: Data) {
-        print("длина байтов -= \(data.count)")
-        
-        do {
-            let weatherResponse = try JSONDecoder().decode(WeatherResponse.self, from: data)
-            print(weatherResponse)
-        } catch {
-            print("error = \(error.localizedDescription)")
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell =
+            tableView.dequeueReusableCell(withIdentifier: kDialogTableViewCellReuseIdentifier,
+                                          for: indexPath) as? DialogTableViewCell else {
+                                            return UITableViewCell()
+        }
+        cell.viewModel = dataSource[indexPath.row]
+        return cell
+    }
+    
+    
+}
+
+// MARK: - UITableViewDelegate Implementation
+
+extension DialogsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToChat", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+// MARK: - Prepare for segue
+
+extension DialogsViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToChat" {
+            guard let rowIndex = tableView.indexPathForSelectedRow?.row else {
+                return
+            }
+            presenter.output.selected(dialog: dataSource[rowIndex], chatViewController: (segue.destination as! ChatsViewController))
         }
     }
 }
